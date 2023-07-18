@@ -35,14 +35,14 @@ public class Badge
 
     private String generateRandomCode()
     {
-        String ALPHABET_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String albhabetString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder builder = new StringBuilder();
         Random rand = new Random();
 
         for (int i = 0; i < CODE_LENGTH; i++)
         {
-            int character = rand.nextInt(ALPHABET_STRING.length());
-            builder.append(ALPHABET_STRING.charAt(character));
+            int index = rand.nextInt(albhabetString.length());
+            builder.append(albhabetString.charAt(index));
         }
 
         return builder.toString();
