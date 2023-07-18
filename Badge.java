@@ -20,10 +20,12 @@ public class Badge
 
     private String generateBadgeIdCode()
     {
+        int MIN_NUMBER = 100;
+        int MAX_NUMBER = 999;
         Random rand = new Random();
-        // I assume you want me to use three-digit numbers, and not letters for a random code.
-        String randomCode1 = String.valueOf(rand.nextInt(100, 1000));
-        String randomCode2 = String.valueOf(rand.nextInt(100, 1000)); // Same as above.
+
+        String randomCode1 = String.valueOf(rand.nextInt(MIN_NUMBER, MAX_NUMBER+1));
+        String randomCode2 = String.valueOf(rand.nextInt(MIN_NUMBER, MAX_NUMBER+1)); // Same as above.
         return String.format("%s%s%s%s",
                 randomCode1,
                 employee.getName(),
