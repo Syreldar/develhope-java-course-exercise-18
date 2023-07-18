@@ -39,7 +39,7 @@ public class Badge
         int MAX_NUMBER = 999;
         Random rand = new Random();
 
-        int randomNumber = rand.nextInt((MAX_NUMBER - MIN_NUMBER) + 1) + MIN_NUMBER;
+        int randomNumber = rand.nextInt(MIN_NUMBER, MAX_NUMBER+1);
         return String.valueOf(randomNumber);
     }
 
