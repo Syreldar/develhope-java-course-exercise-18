@@ -35,11 +35,10 @@ public class Badge
 
     private String generateRandomCode()
     {
-        int MIN_NUMBER = 100;
-        int MAX_NUMBER = 999;
+        int minNumber = 100, maxNumber = 999;
         Random rand = new Random();
 
-        int randomNumber = rand.nextInt(MIN_NUMBER, MAX_NUMBER+1);
+        int randomNumber = rand.nextInt(minNumber, maxNumber+1);
         return String.valueOf(randomNumber);
     }
 
